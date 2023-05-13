@@ -21,20 +21,14 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.cargarDatapascientes();
+      
   }
 
-  public cargarDatapascientes(){
-    this.servicio.get(' http://localhost:3000/Pacientes')
-    .subscribe((res: any) =>{
-      this.pascientes = res;
-    });
-  }
+  
 
   public mostrarPascientes(){
     this.router.navigate(['/pasciente']);
   }
-  
   
 
 }
